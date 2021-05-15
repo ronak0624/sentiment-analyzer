@@ -1,26 +1,12 @@
-# STEP 1: rename this file to hw3_sentiment.py
-
-# feel free to include more imports as needed here
-# these are the ones that we used for the base model
-# import numpy as np
 import sys
 from collections import Counter
 import math
 
 """
-Your name and file comment here:
+Ronak Patel
 """
 
-
-"""
-Cite your sources here:
-"""
-
-"""
-Implement your functions that are not methods of the Sentiment Analysis class here
-"""
-
-
+# Generates tuples from list of reviews, for use in 
 def generate_tuples_from_file(training_file_path):
 	# open file
 	# parse lines
@@ -78,20 +64,9 @@ def comparison(gold_labels, classified_labels):
 	return (tp, tn, fp, fn)
 
 
-"""
-Implement any other non-required functions here
-"""
-
-
-"""
-implement your SentimentAnalysis class here
-"""
-
-
 class SentimentAnalysis:
 
 	def __init__(self):
-		# do whatever you need to do to set up your class here
 		self.pos_count = {}
 		self.neg_count = {}
 		self.pos_prob = {}
@@ -310,7 +285,7 @@ class SentimentAnalysisImproved:
 
 if __name__ == "__main__":
 	if len(sys.argv) != 3:
-		print("Usage:", "python hw3_sentiment.py training-file.txt testing-file.txt")
+		print("Usage:", "python sentiment.py training-file.txt testing-file.txt")
 		sys.exit(1)
 
 	training = sys.argv[1]
